@@ -10,6 +10,8 @@ export type ProjectItem = {
   slug: string;
   title: string;
   label: string;
+  image: string;
+  imageAlt: string;
   tags: string[];
   body: string;
   period: string;
@@ -74,6 +76,8 @@ export const projects: ProjectItem[] = [
     slug: "diffusion-watermarking-research",
     title: "64-bit Diffusion Watermarking Research",
     label: "Machine learning research",
+    image: "/projects/diffusion-watermarking.png",
+    imageAlt: "Abstract diffusion network embedding a binary watermark into an image",
     tags: ["Python", "PyTorch", "DDPM", "DDIM", "Hugging Face"],
     body: "Watermark embedding research using diffusion models with Embedder and Extractor neural networks for robust bit recovery.",
     period: "Oct 2025 - Jan 2026",
@@ -88,6 +92,8 @@ export const projects: ProjectItem[] = [
     slug: "futureskill-learning-platform-integrations",
     title: "FutureSkill Learning Platform Integrations",
     label: "Frontend platform work",
+    image: "/projects/futureskill-platform.png",
+    imageAlt: "Modern online learning dashboard with connected course and application flows",
     tags: ["Next.js", "TypeScript", "NextAuth.js", "Tailwind CSS", "Line LIFF"],
     body: "Frontend platform improvements for a B2C learning system, including external integrations and UI stability fixes.",
     period: "Apr 2025 - Aug 2025",
@@ -103,6 +109,8 @@ export const projects: ProjectItem[] = [
     slug: "sopet-mobile-features",
     title: "SOPet Mobile App Features",
     label: "React Native mobile features",
+    image: "/projects/sopet-mobile.png",
+    imageAlt: "Pet social mobile application with camera and notification features",
     tags: ["React Native", "TypeScript", "Firebase Authentication", "MongoDB", "Expo"],
     body: "Mobile feature development for pet-focused user-generated content flows, real-time updates, and safer destructive actions.",
     period: "Jan 2025 - Apr 2025",
@@ -117,6 +125,8 @@ export const projects: ProjectItem[] = [
     slug: "furniture-retail-website",
     title: "Furniture Retail Website",
     label: "Full-stack ecommerce",
+    image: "/projects/furniture-retail.png",
+    imageAlt: "Furniture ecommerce storefront connected to an order and manufacturing workflow",
     tags: ["PHP", "MySQL", "JavaScript", "Figma"],
     body: "Order, manufacturing, promotion, product categorization, and cart flows for an academic ecommerce system.",
     period: "Jun 2024 - Oct 2024",
@@ -131,6 +141,8 @@ export const projects: ProjectItem[] = [
     slug: "e-commerce-fashion-mobile-app",
     title: "E-Commerce Fashion Mobile App",
     label: "Mobile product discovery",
+    image: "/projects/fashion-mobile.png",
+    imageAlt: "Fashion discovery mobile application with clothing cards and social profiles",
     tags: ["Flutter", "Dart", "Firebase"],
     body: "Fashion browsing, recommendations, profiles, posts, authentication, Firestore, and cloud storage integration.",
     period: "Dec 2024 - Mar 2025",
@@ -146,6 +158,8 @@ export const projects: ProjectItem[] = [
     slug: "ar-racing-game",
     title: "AR Racing Game",
     label: "XR gameplay prototype",
+    image: "/projects/ar-racing.png",
+    imageAlt: "Augmented reality racing car moving around a tracked tabletop circuit",
     tags: ["Unity", "C#", "Vuforia", "Blender"],
     body: "Interactive AR racing with object tracking, scoring, movement controls, and optimized 3D assets.",
     period: "Jul 2023 - Oct 2023",
@@ -160,6 +174,8 @@ export const projects: ProjectItem[] = [
     slug: "tedxkasetsartu-salon-registration-system",
     title: "TEDxKasetsartU Salon Registration System",
     label: "Event registration system",
+    image: "/projects/tedx-registration.png",
+    imageAlt: "Digital event registration system with ticket, attendee, and email workflow",
     tags: ["Django", "Python", "Tailwind CSS", "JavaScript"],
     body: "Ticket booking and registration system for TEDxKasetsartU Salon 2025 with attendee management and automated notifications.",
     period: "Sep 2024 - Dec 2024",
@@ -174,6 +190,8 @@ export const projects: ProjectItem[] = [
     slug: "tedxkasetsartu-ticket-booking-web-app",
     title: "TEDxKasetsartU Ticket Booking Web App",
     label: "Event booking web app",
+    image: "/projects/tedx-booking.png",
+    imageAlt: "Event ticket booking interface with confirmation and check-in flow",
     tags: ["Next.js", "Python", "Tailwind CSS", "JavaScript", "Apps Script"],
     body: "Ticket booking UI and automated confirmation email workflow for TEDxKasetsartU 2024.",
     period: "Aug 2023 - Mar 2024",

@@ -1,6 +1,6 @@
+import Image from "next/image";
 import type { ProjectItem } from "../data/portfolio";
 import { RouterLink } from "./ClientRouter";
-import { RouteScene } from "./RouteScene";
 
 const labelClass =
   "font-mono text-xs font-extrabold uppercase tracking-[0.08em] text-[#7be7ff]";
@@ -45,8 +45,16 @@ export function ProjectDetailView({ project }: { project: ProjectItem }) {
             ) : null}
           </div>
 
-          <div className="h-72 overflow-hidden rounded-lg border border-[#344144]/80 bg-[#171b1c]/45 md:h-80 lg:h-85">
-            <RouteScene label={`${project.title} interactive route visual`} />
+          <div className="relative h-72 overflow-hidden rounded-lg border border-[#344144]/80 bg-[#171b1c]/45 md:h-80 lg:h-85">
+            <Image
+              src={project.image}
+              alt={project.imageAlt}
+              fill
+              priority
+              sizes="(max-width: 1023px) 100vw, 340px"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 ring-1 ring-inset ring-[#7be7ff]/10" />
           </div>
         </div>
 

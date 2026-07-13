@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ProjectItem } from "../data/portfolio";
 import { RouterLink } from "./ClientRouter";
 
@@ -10,9 +11,20 @@ const labelClass =
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="group grid min-h-65 content-between gap-5 rounded-lg border border-[#344144]/90 bg-[linear-gradient(135deg,rgba(123,231,255,0.08),transparent_42%),rgba(23,27,28,0.78)] p-6 transition hover:-translate-y-1 hover:border-[#7be7ff]/60 md:min-h-75 md:p-8">
-      <RouterLink className="grid gap-5" href={`/projects/${project.slug}`}>
-        <div className="grid gap-5">
+    <article className="group grid content-between overflow-hidden rounded-lg border border-[#344144]/90 bg-[linear-gradient(135deg,rgba(123,231,255,0.08),transparent_42%),rgba(23,27,28,0.78)] transition hover:-translate-y-1 hover:border-[#7be7ff]/60">
+      <RouterLink className="grid" href={`/projects/${project.slug}`}>
+        <div className="relative aspect-[16/9] overflow-hidden border-b border-[#344144]/80 bg-[#101313]">
+          <Image
+            src={project.image}
+            alt={project.imageAlt}
+            fill
+            sizes="(max-width: 767px) 100vw, 50vw"
+            className="object-cover transition duration-500 group-hover:scale-[1.035]"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(16,19,19,0.42))]" />
+        </div>
+
+        <div className="grid gap-5 p-6 md:p-8">
           <p className={labelClass}>{project.label}</p>
           <div className="flex items-start justify-between gap-4">
             <h3 className="text-[22px] font-bold leading-tight">
@@ -29,7 +41,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </RouterLink>
 
-      <div className="grid gap-4">
+      <div className="grid gap-4 px-6 pb-6 md:px-8 md:pb-8">
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <small
