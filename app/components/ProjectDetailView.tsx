@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FiArrowLeft } from "react-icons/fi";
 import type { ProjectItem } from "../data/portfolio";
 import { RouterLink } from "./ClientRouter";
 
@@ -14,9 +15,13 @@ export function ProjectDetailView({ project }: { project: ProjectItem }) {
             Nutpawee
           </RouterLink>
           <RouterLink
-            className="rounded-lg border border-[#344144] px-4 py-2 text-sm font-bold text-[#aec0c3] transition hover:border-[#7be7ff] hover:text-[#7be7ff]"
+            className="group flex items-center gap-2 rounded-lg border border-[#344144] px-4 py-2 text-sm font-bold text-[#aec0c3] transition hover:border-[#7be7ff] hover:text-[#7be7ff]"
             href="/#projects"
           >
+            <FiArrowLeft
+              className="text-base text-[#7be7ff] transition-transform group-hover:-translate-x-1"
+              aria-hidden="true"
+            />
             All Projects
           </RouterLink>
         </div>
