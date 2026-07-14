@@ -13,7 +13,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="group grid content-between overflow-hidden rounded-lg border border-[#344144]/90 bg-[linear-gradient(135deg,rgba(123,231,255,0.08),transparent_42%),rgba(23,27,28,0.78)] transition hover:-translate-y-1 hover:border-[#7be7ff]/60">
       <RouterLink className="grid" href={`/projects/${project.slug}`}>
-        <div className="relative aspect-[16/9] overflow-hidden border-b border-[#344144]/80 bg-[#101313]">
+        <div className="relative aspect-video overflow-hidden border-b border-[#344144]/80 bg-[#101313]">
           <Image
             src={project.image}
             alt={project.imageAlt}
