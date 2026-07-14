@@ -67,7 +67,14 @@ export const experiences: ExperienceItem[] = [
     org: "TEDxKasetsartU Salon 2025",
     date: "Sep 2024 - Dec 2024",
     body: "Led a ticket booking and registration system with automated email notifications for attendee management.",
-    websiteUrl: "https://www.tedxkasetsartu.com/",
+    websiteUrl: "https://www.tedxkasetsartu.com/moments-in-time",
+  },
+  {
+    role: "Front-End Developer",
+    org: "TEDxKasetsartU 2024",
+    date: "Aug 2023 - Mar 2024",
+    body: "Developed the frontend for a ticket booking web application, collaborated with the backend team on the full event workflow, and implemented automated confirmation emails with Apps Script.",
+    websiteUrl: "https://www.tedxkasetsartu.com/morning-glory",
   },
 ];
 
@@ -86,23 +93,6 @@ export const projects: ProjectItem[] = [
       "Researched and developed 64-bit watermark embedding using DDPM and DDIM diffusion models.",
       "Trained Embedder and Extractor networks with PyTorch and AdamW optimizer.",
       "Reached 98.07% validation bit accuracy and improved inference efficiency with deterministic sampling.",
-    ],
-  },
-  {
-    slug: "futureskill-learning-platform-integrations",
-    title: "FutureSkill Learning Platform Integrations",
-    label: "Frontend platform work",
-    image: "/projects/futureskill-platform.png",
-    imageAlt: "Modern online learning dashboard with connected course and application flows",
-    tags: ["Next.js", "TypeScript", "NextAuth.js", "Tailwind CSS", "Line LIFF"],
-    body: "Frontend platform improvements for a B2C learning system, including external integrations and UI stability fixes.",
-    period: "Apr 2025 - Aug 2025",
-    role: "Front-End Developer Intern",
-    githubUrl: "https://github.com/nammeyyy/todo-nextjs",
-    highlights: [
-      "Implemented external integrations including affiliate links and course application flows.",
-      "Fixed UI component bugs and improved platform stability for the B2C learning product.",
-      "Collaborated with senior developers to debug and optimize frontend performance.",
     ],
   },
   {
