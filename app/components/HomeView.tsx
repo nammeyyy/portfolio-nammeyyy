@@ -12,9 +12,9 @@ import {
 
 const sectionPadding = "px-5 py-20 md:px-16 lg:py-28";
 const labelClass =
-  "font-mono text-xs font-extrabold uppercase tracking-[0.08em] text-[#7be7ff]";
+  "font-mono text-xs font-extrabold uppercase tracking-[0.08em] text-breadcrumb";
 const sideLinkClass =
-  "border-l-2 border-transparent px-3.5 py-3 text-[13px] font-bold text-[#aec0c3] transition hover:border-[#7be7ff] hover:bg-[#7be7ff]/5 hover:text-[#7be7ff]";
+  "border-l-2 border-transparent px-3.5 py-3 text-[13px] font-bold text-normal transition hover:border-cyan hover:bg-cyan/5 hover:text-breadcrumb";
 
 export function HomeView() {
   return (
@@ -25,7 +25,7 @@ export function HomeView() {
           href="#home"
           aria-label="Nutpawee home"
         >
-          <span className="grid size-11 place-items-center rounded-full border border-[#7be7ff]/50 bg-[linear-gradient(145deg,rgba(123,231,255,0.18),rgba(255,209,102,0.14))] font-mono text-[13px] font-extrabold text-[#7be7ff]">
+          <span className="grid size-11 place-items-center rounded-full border border-cyan/50 bg-[linear-gradient(145deg,rgba(123,231,255,0.18),rgba(255,209,102,0.14))] font-mono text-[13px] font-extrabold text-breadcrumb">
             NK
           </span>
           <span>
@@ -64,7 +64,7 @@ export function HomeView() {
             {topNavLinks.map((link) => (
               <RouterLink
                 key={link.label}
-                className="text-[13px] font-bold text-[#aec0c3] transition-colors hover:text-[#7be7ff]"
+                className="text-[13px] font-bold text-normal transition-colors hover:text-breadcrumb"
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noreferrer" : undefined}
@@ -91,7 +91,7 @@ export function HomeView() {
               {topNavLinks.map((link) => (
                 <RouterLink
                   key={link.label}
-                  className="border-b border-[#344144]/70 px-4 py-3.5 text-[13px] font-bold text-[#aec0c3] last:border-b-0 hover:text-[#7be7ff]"
+                  className="border-b border-[#344144]/70 px-4 py-3.5 text-[13px] font-bold text-normal last:border-b-0 hover:text-breadcrumb"
                   href={link.href}
                   target={link.external ? "_blank" : undefined}
                   rel={link.external ? "noreferrer" : undefined}
@@ -116,7 +116,7 @@ export function HomeView() {
             <h1 className="mt-3.5 max-w-190 text-[clamp(52px,9vw,112px)] font-black leading-[0.93]">
               Nutpawee Kawee
             </h1>
-            <p className="mt-6 max-w-172.5 text-[clamp(18px,2.1vw,24px)] leading-relaxed text-[#aec0c3]">
+            <p className="mt-6 max-w-172.5 text-[clamp(18px,2.1vw,24px)] leading-relaxed text-normal">
               Results-driven aspiring software engineer with hands-on
               experience building responsive web and mobile applications,
               integrating APIs, and applying full-stack principles to deliver
@@ -125,13 +125,13 @@ export function HomeView() {
 
             <div className="mt-8 flex flex-wrap items-center gap-3.5">
               <RouterLink
-                className="min-h-12 rounded-lg bg-[#7be7ff] px-5 py-3.5 text-[13px] font-extrabold text-[#052127] transition hover:-translate-y-0.5"
+                className="min-h-12 rounded-lg bg-cyan px-5 py-3.5 text-[13px] font-extrabold text-action transition hover:-translate-y-0.5"
                 href="/#projects"
               >
                 View Projects
               </RouterLink>
               <a
-                className="min-h-12 rounded-lg border border-[#344144] px-5 py-3.5 text-[13px] font-extrabold text-secondaryText transition hover:-translate-y-0.5 hover:border-[#7be7ff]/60 hover:bg-[#7be7ff]/10"
+                className="min-h-12 rounded-lg border border-[#344144] px-5 py-3.5 text-[13px] font-extrabold text-secondaryText transition hover:-translate-y-0.5 hover:border-cyan/60 hover:bg-cyan/10"
                 href="/Nutpawee_CV.pdf"
                 target="_blank"
                 rel="noreferrer"
@@ -139,7 +139,7 @@ export function HomeView() {
                 View Resume
               </a>
               <a
-                className="min-h-12 rounded-lg px-5 py-3.5 text-[13px] font-extrabold text-third transition hover:-translate-y-0.5 hover:text-[#7be7ff]"
+                className="min-h-12 rounded-lg px-5 py-3.5 text-[13px] font-extrabold text-third transition hover:-translate-y-0.5 hover:text-breadcrumb"
                 href="/Nutpawee_CV.pdf"
                 download
               >
@@ -148,7 +148,7 @@ export function HomeView() {
             </div>
 
             <dl
-              className="mt-11 grid max-w-190 grid-cols-1 gap-px overflow-hidden rounded-lg border border-[#7be7ff]/15 bg-[#7be7ff]/15 shadow-[0_24px_60px_rgba(0,0,0,0.38)] sm:grid-cols-3"
+              className="mt-11 grid max-w-190 grid-cols-1 gap-px overflow-hidden rounded-lg border border-cyan/15 bg-cyan/15 shadow-[0_24px_60px_rgba(0,0,0,0.38)] sm:grid-cols-3"
               aria-label="Portfolio highlights"
             >
               {[
@@ -160,7 +160,7 @@ export function HomeView() {
                   <dt className="text-3xl font-black text-third">
                     {value}
                   </dt>
-                  <dd className="mt-2 text-[13px] leading-snug text-[#aec0c3]">
+                  <dd className="mt-2 text-[13px] leading-snug text-normal">
                     {label}
                   </dd>
                 </div>
@@ -182,7 +182,7 @@ export function HomeView() {
             <h2 className="text-[clamp(30px,5vw,54px)] font-bold leading-none">
               Frontend instincts with full-stack range
             </h2>
-            <p className="text-lg leading-8 text-[#aec0c3]">
+            <p className="text-lg leading-8 text-normal">
               I build interfaces in Next.js, TypeScript, React Native, Flutter,
               Django, and Firebase-backed systems. My work spans learning
               platforms, mobile social features, ticketing systems, ecommerce,
@@ -197,7 +197,7 @@ export function HomeView() {
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="rounded-full border border-[#7be7ff]/25 bg-[#7be7ff]/10 px-4 py-3 font-mono text-[13px] text-secondaryText"
+                className="rounded-full border border-cyan/25 bg-cyan/10 px-4 py-3 font-mono text-[13px] text-secondaryText"
               >
                 {skill}
               </span>
@@ -250,7 +250,7 @@ export function HomeView() {
               return (
                 <a
                   key={label}
-                  className="rounded-lg border border-[#344144] px-4 py-3 font-bold text-[#aec0c3] transition hover:border-[#7be7ff] hover:text-[#7be7ff]"
+                  className="rounded-lg border border-[#344144] px-4 py-3 font-bold text-normal transition hover:border-cyan hover:text-breadcrumb"
                   href={href}
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noreferrer" : undefined}

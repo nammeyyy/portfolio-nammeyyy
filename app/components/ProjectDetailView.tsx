@@ -4,7 +4,7 @@ import type { ProjectItem } from "../data/portfolio";
 import { RouterLink } from "./ClientRouter";
 
 const labelClass =
-  "font-mono text-xs font-extrabold uppercase tracking-[0.08em] text-[#7be7ff]";
+  "font-mono text-xs font-extrabold uppercase tracking-[0.08em] text-breadcrumb";
 
 export function ProjectDetailView({ project }: { project: ProjectItem }) {
   return (
@@ -15,11 +15,11 @@ export function ProjectDetailView({ project }: { project: ProjectItem }) {
             Nutpawee
           </RouterLink>
           <RouterLink
-            className="group flex items-center gap-2 rounded-lg border border-[#344144] px-4 py-2 text-sm font-bold text-[#aec0c3] transition hover:border-[#7be7ff] hover:text-[#7be7ff]"
+            className="group flex items-center gap-2 rounded-lg border border-[#344144] px-4 py-2 text-sm font-bold text-normal transition hover:border-cyan hover:text-breadcrumb"
             href="/#projects"
           >
             <FiArrowLeft
-              className="text-base text-[#7be7ff] transition-transform group-hover:-translate-x-1"
+              className="text-base text-breadcrumb transition-transform group-hover:-translate-x-1"
               aria-hidden="true"
             />
             All Projects
@@ -34,13 +34,13 @@ export function ProjectDetailView({ project }: { project: ProjectItem }) {
             <h1 className="mt-4 max-w-full wrap-break-word text-[clamp(42px,6vw,76px)] font-black leading-none">
               {project.title}
             </h1>
-            <p className="mt-6 max-w-3xl text-xl leading-9 text-[#aec0c3]">
+            <p className="mt-6 max-w-3xl text-xl leading-9 text-normal">
               {project.body}
             </p>
 
             {project.githubUrl ? (
               <a
-                className="mt-8 inline-flex rounded-lg border border-[#344144] px-4 py-3 font-bold text-[#aec0c3] transition hover:border-[#7be7ff] hover:text-[#7be7ff]"
+                className="mt-8 inline-flex rounded-lg border border-[#344144] px-4 py-3 font-bold text-normal transition hover:border-cyan hover:text-breadcrumb"
                 href={project.githubUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -59,11 +59,11 @@ export function ProjectDetailView({ project }: { project: ProjectItem }) {
               sizes="(max-width: 1023px) 100vw, 340px"
               className="object-cover"
             />
-            <div className="absolute inset-0 ring-1 ring-inset ring-[#7be7ff]/10" />
+            <div className="absolute inset-0 ring-1 ring-inset ring-cyan/10" />
           </div>
         </div>
 
-        <dl className="mt-10 grid gap-px overflow-hidden rounded-lg border border-[#7be7ff]/15 bg-[#7be7ff]/15 md:grid-cols-2">
+        <dl className="mt-10 grid gap-px overflow-hidden rounded-lg border border-cyan/15 bg-cyan/15 md:grid-cols-2">
           <div className="bg-[#171b1c]/85 p-6">
             <dt className={labelClass}>Role</dt>
             <dd className="mt-3 text-2xl font-bold">{project.role}</dd>
@@ -76,10 +76,10 @@ export function ProjectDetailView({ project }: { project: ProjectItem }) {
 
         <section className="mt-10 rounded-lg border border-[#344144]/90 bg-[#171b1c]/80 p-6 md:p-8">
           <h2 className="text-2xl font-bold">Highlights</h2>
-          <ul className="mt-5 grid gap-4 text-[#aec0c3]">
+          <ul className="mt-5 grid gap-4 text-normal">
             {project.highlights.map((highlight) => (
               <li key={highlight} className="flex gap-3 leading-7">
-                <span className="mt-2 block size-2 shrink-0 rounded-full bg-[#7be7ff]" />
+                <span className="mt-2 block size-2 shrink-0 rounded-full bg-cyan" />
                 <span>{highlight}</span>
               </li>
             ))}
@@ -90,7 +90,7 @@ export function ProjectDetailView({ project }: { project: ProjectItem }) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-[#7be7ff]/25 bg-[#7be7ff]/10 px-3 py-2 font-mono text-sm text-secondaryText"
+              className="rounded-full border border-cyan/25 bg-cyan/10 px-3 py-2 font-mono text-sm text-secondaryText"
             >
               {tag}
             </span>

@@ -57,14 +57,14 @@ function RoutedView() {
   return (
     <main className="grid min-h-screen place-items-center bg-[#101313] px-5 text-center text-secondaryText">
       <div>
-        <p className="font-mono text-xs font-extrabold uppercase tracking-[0.08em] text-[#7be7ff]">
+        <p className="font-mono text-xs font-extrabold uppercase tracking-[0.08em] text-breadcrumb">
           404 / Route not found
         </p>
         <h1 className="mt-4 text-[clamp(42px,8vw,88px)] font-black leading-none">
           This path drifted off course.
         </h1>
         <RouterLink
-          className="mt-8 inline-flex rounded-lg bg-[#7be7ff] px-5 py-3.5 text-[13px] font-extrabold text-[#052127]"
+          className="mt-8 inline-flex rounded-lg bg-cyan px-5 py-3.5 text-[13px] font-extrabold text-action"
           href="/"
           replace
         >

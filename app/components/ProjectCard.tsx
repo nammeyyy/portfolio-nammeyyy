@@ -7,11 +7,11 @@ type ProjectCardProps = {
 };
 
 const labelClass =
-  "font-mono text-xs font-extrabold uppercase tracking-[0.08em] text-[#7be7ff]";
+  "font-mono text-xs font-extrabold uppercase tracking-[0.08em] text-breadcrumb";
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="group grid content-between overflow-hidden rounded-lg border border-[#344144]/90 bg-[linear-gradient(135deg,rgba(123,231,255,0.08),transparent_42%),rgba(23,27,28,0.78)] transition hover:-translate-y-1 hover:border-[#7be7ff]/60">
+    <article className="group grid content-between overflow-hidden rounded-lg border border-[#344144]/90 bg-[linear-gradient(135deg,rgba(123,231,255,0.08),transparent_42%),rgba(23,27,28,0.78)] transition hover:-translate-y-1 hover:border-cyan/60">
       <RouterLink className="grid" href={`/projects/${project.slug}`}>
         <div className="relative aspect-video overflow-hidden border-b border-[#344144]/80 bg-[#101313]">
           <Image
@@ -31,13 +31,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
               {project.title}
             </h3>
             <span
-              className="mt-1 text-lg text-[#7be7ff] transition group-hover:translate-x-1"
+              className="mt-1 text-lg text-breadcrumb transition group-hover:translate-x-1"
               aria-hidden="true"
             >
               →
             </span>
           </div>
-          <span className="leading-relaxed text-[#aec0c3]">{project.body}</span>
+          <span className="leading-relaxed text-normal">{project.body}</span>
         </div>
       </RouterLink>
 
@@ -46,7 +46,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.tags.map((tag) => (
             <small
               key={tag}
-              className="rounded-full border border-[#7be7ff]/25 bg-[#7be7ff]/10 px-2.5 py-1.5 font-mono text-[13px] text-secondaryText"
+              className="rounded-full border border-cyan/25 bg-cyan/10 px-2.5 py-1.5 font-mono text-[13px] text-secondaryText"
             >
               {tag}
             </small>
@@ -55,7 +55,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         {project.githubUrl ? (
           <a
-            className="w-fit rounded-lg border border-[#344144] px-3 py-2 text-sm font-bold text-[#aec0c3] transition hover:border-[#7be7ff] hover:text-[#7be7ff]"
+            className="w-fit rounded-lg border border-[#344144] px-3 py-2 text-sm font-bold text-normal transition hover:border-cyan hover:text-breadcrumb"
             href={project.githubUrl}
             target="_blank"
             rel="noreferrer"

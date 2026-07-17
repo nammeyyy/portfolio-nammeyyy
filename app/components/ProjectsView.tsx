@@ -4,7 +4,7 @@ import { ProjectCard } from "./ProjectCard";
 import { RouteScene } from "./RouteScene";
 
 const labelClass =
-  "font-mono text-xs font-extrabold uppercase tracking-[0.08em] text-[#7be7ff]";
+  "font-mono text-xs font-extrabold uppercase tracking-[0.08em] text-breadcrumb";
 
 export function ProjectsView() {
   return (
@@ -15,7 +15,7 @@ export function ProjectsView() {
             Nutpawee
           </RouterLink>
           <RouterLink
-            className="rounded-lg border border-[#344144] px-4 py-2 text-sm font-bold text-[#aec0c3] transition hover:border-[#7be7ff] hover:text-[#7be7ff]"
+            className="rounded-lg border border-[#344144] px-4 py-2 text-sm font-bold text-normal transition hover:border-cyan hover:text-breadcrumb"
             href="/"
           >
             Back Home
@@ -29,7 +29,7 @@ export function ProjectsView() {
           <h1 className="mt-4 max-w-4xl text-[clamp(42px,8vw,88px)] font-black leading-none">
             Projects.
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-[#aec0c3]">
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-normal">
             A focused collection of applied engineering work from academic,
             internship, event, mobile, and immersive interface projects.
           </p>

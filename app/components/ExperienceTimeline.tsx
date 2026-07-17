@@ -23,21 +23,21 @@ export function ExperienceTimeline({ items }: ExperienceTimelineProps) {
             className="col-start-1 row-span-2 row-start-1 flex justify-center pt-1 min-[721px]:col-start-2 min-[721px]:row-auto min-[721px]:pt-7"
             aria-hidden="true"
           >
-            <span className="block size-4.5 rounded-full border border-[#7be7ff] bg-[radial-gradient(circle,#7be7ff_0_3px,transparent_4px),#101313] shadow-[0_0_0_6px_rgba(123,231,255,0.08),0_0_24px_rgba(123,231,255,0.28)]" />
+            <span className="block size-4.5 rounded-full border border-cyan bg-[radial-gradient(circle,var(--cyan)_0_3px,transparent_4px),#101313] shadow-[0_0_0_6px_rgba(123,231,255,0.08),0_0_24px_rgba(123,231,255,0.28)]" />
           </div>
 
-          <article className="col-start-2 row-start-2 grid gap-3.5 rounded-lg border border-[#344144]/90 bg-[linear-gradient(135deg,rgba(123,231,255,0.09),transparent_34%),rgba(23,27,28,0.82)] p-6 transition hover:border-[#7be7ff]/60 min-[721px]:col-start-3 min-[721px]:row-auto min-[721px]:gap-2.5 min-[721px]:p-7 min-[721px]:hover:translate-x-1">
-            <p className="font-mono text-xs font-extrabold uppercase tracking-[0.08em] text-[#7be7ff]">
+          <article className="col-start-2 row-start-2 grid gap-3.5 rounded-lg border border-[#344144]/90 bg-[linear-gradient(135deg,rgba(123,231,255,0.09),transparent_34%),rgba(23,27,28,0.82)] p-6 transition hover:border-cyan/60 min-[721px]:col-start-3 min-[721px]:row-auto min-[721px]:gap-2.5 min-[721px]:p-7 min-[721px]:hover:translate-x-1">
+            <p className="font-mono text-xs font-extrabold uppercase tracking-[0.08em] text-breadcrumb">
               Experience 0{index + 1}
             </p>
             <h3 className="text-[22px] font-bold leading-tight">
               {item.role}
             </h3>
             <p className="my-1 font-bold text-third">{item.org}</p>
-            <p className="leading-relaxed text-[#aec0c3]">{item.body}</p>
+            <p className="leading-relaxed text-normal">{item.body}</p>
             {item.websiteUrl ? (
               <a
-                className="mt-2 inline-flex w-fit rounded-lg border border-[#344144] px-3 py-2 text-sm font-bold text-[#aec0c3] transition hover:border-[#7be7ff] hover:text-[#7be7ff]"
+                className="mt-2 inline-flex w-fit rounded-lg border border-[#344144] px-3 py-2 text-sm font-bold text-normal transition hover:border-cyan hover:text-breadcrumb"
                 href={item.websiteUrl}
                 target="_blank"
                 rel="noreferrer"

@@ -3,9 +3,14 @@
 @theme {
   --color-secondaryText: #edf4f4;
   --color-third: #ffd166;
+  --color-breadcrumb: var(--cyan);
+  --color-cyan: var(--cyan);
+  --color-normal: #aec0c3;
+  --color-action: #052127;
 }
 
 :root {
+  --cyan: #7be7ff;
   color-scheme: dark;
 }
 
