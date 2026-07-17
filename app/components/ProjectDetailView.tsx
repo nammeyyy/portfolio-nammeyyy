@@ -8,10 +8,10 @@ const labelClass =
 
 export function ProjectDetailView({ project }: { project: ProjectItem }) {
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_78%_18%,rgba(123,231,255,0.16),transparent_26rem),radial-gradient(circle_at_22%_76%,rgba(255,209,102,0.08),transparent_24rem),linear-gradient(135deg,#101313_0%,#141818_48%,#111414_100%)] text-[#edf4f4]">
+    <main className="min-h-screen bg-[radial-gradient(circle_at_78%_18%,rgba(123,231,255,0.16),transparent_26rem),radial-gradient(circle_at_22%_76%,rgba(255,209,102,0.08),transparent_24rem),linear-gradient(135deg,#101313_0%,#141818_48%,#111414_100%)] text-secondaryText">
       <header className="sticky top-0 z-20 border-b border-[#344144]/70 bg-[#101313]/75 px-5 py-3.5 backdrop-blur-lg md:px-16">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-4">
-          <RouterLink className="font-extrabold text-[#edf4f4]" href="/">
+          <RouterLink className="font-extrabold text-secondaryText" href="/">
             Nutpawee
           </RouterLink>
           <RouterLink
@@ -90,7 +90,7 @@ export function ProjectDetailView({ project }: { project: ProjectItem }) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-[#7be7ff]/25 bg-[#7be7ff]/10 px-3 py-2 font-mono text-sm text-[#edf4f4]"
+              className="rounded-full border border-[#7be7ff]/25 bg-[#7be7ff]/10 px-3 py-2 font-mono text-sm text-secondaryText"
             >
               {tag}
             </span>

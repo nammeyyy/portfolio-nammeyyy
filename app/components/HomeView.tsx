@@ -30,7 +30,7 @@ export function HomeView() {
           </span>
           <span>
             <strong className="block font-extrabold">Nutpawee</strong>
-            <small className="mt-0.5 block text-xs text-[#aec0c3]">
+            <small className="mt-0.5 block text-xs text-secondaryText">
               Software Engineer
             </small>
           </span>
@@ -79,9 +79,9 @@ export function HomeView() {
               className="flex size-11 cursor-pointer list-none flex-col items-center justify-center gap-1.5 rounded-lg border border-[#344144] bg-[#171b1c]/85 [&::-webkit-details-marker]:hidden"
               aria-label="Open navigation menu"
             >
-              <span className="h-0.5 w-5 rounded-full bg-[#edf4f4] transition group-open:translate-y-2 group-open:rotate-45" />
-              <span className="h-0.5 w-5 rounded-full bg-[#edf4f4] transition group-open:opacity-0" />
-              <span className="h-0.5 w-5 rounded-full bg-[#edf4f4] transition group-open:-translate-y-2 group-open:-rotate-45" />
+              <span className="h-0.5 w-5 rounded-full bg-secondaryText transition group-open:translate-y-2 group-open:rotate-45" />
+              <span className="h-0.5 w-5 rounded-full bg-secondaryText transition group-open:opacity-0" />
+              <span className="h-0.5 w-5 rounded-full bg-secondaryText transition group-open:-translate-y-2 group-open:-rotate-45" />
             </summary>
 
             <nav
@@ -131,7 +131,7 @@ export function HomeView() {
                 View Projects
               </RouterLink>
               <a
-                className="min-h-12 rounded-lg border border-[#344144] px-5 py-3.5 text-[13px] font-extrabold text-[#edf4f4] transition hover:-translate-y-0.5 hover:border-[#7be7ff]/60 hover:bg-[#7be7ff]/10"
+                className="min-h-12 rounded-lg border border-[#344144] px-5 py-3.5 text-[13px] font-extrabold text-secondaryText transition hover:-translate-y-0.5 hover:border-[#7be7ff]/60 hover:bg-[#7be7ff]/10"
                 href="/Nutpawee_CV.pdf"
                 target="_blank"
                 rel="noreferrer"
@@ -139,7 +139,7 @@ export function HomeView() {
                 View Resume
               </a>
               <a
-                className="min-h-12 rounded-lg px-5 py-3.5 text-[13px] font-extrabold text-[#ffd166] transition hover:-translate-y-0.5 hover:text-[#7be7ff]"
+                className="min-h-12 rounded-lg px-5 py-3.5 text-[13px] font-extrabold text-third transition hover:-translate-y-0.5 hover:text-[#7be7ff]"
                 href="/Nutpawee_CV.pdf"
                 download
               >
@@ -157,7 +157,7 @@ export function HomeView() {
                 ["5+", "Web, mobile, ML, and XR builds"],
               ].map(([value, label]) => (
                 <div key={label} className="min-h-28 bg-[#171b1c]/80 p-5">
-                  <dt className="text-3xl font-black text-[#ffd166]">
+                  <dt className="text-3xl font-black text-third">
                     {value}
                   </dt>
                   <dd className="mt-2 text-[13px] leading-snug text-[#aec0c3]">
@@ -197,7 +197,7 @@ export function HomeView() {
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="rounded-full border border-[#7be7ff]/25 bg-[#7be7ff]/10 px-4 py-3 font-mono text-[13px] text-[#edf4f4]"
+                className="rounded-full border border-[#7be7ff]/25 bg-[#7be7ff]/10 px-4 py-3 font-mono text-[13px] text-secondaryText"
               >
                 {skill}
               </span>

@@ -15,7 +15,7 @@ export function ExperienceTimeline({ items }: ExperienceTimelineProps) {
           key={`${item.role}-${item.org}`}
           className="relative grid grid-cols-[32px_minmax(0,1fr)] min-[721px]:min-h-48 min-[721px]:grid-cols-[190px_64px_minmax(0,1fr)]"
         >
-          <div className="col-start-2 row-start-1 pb-4 pl-2 text-left font-mono text-xs font-extrabold uppercase leading-relaxed tracking-[0.08em] text-[#ffd166] min-[721px]:col-start-1 min-[721px]:row-auto min-[721px]:flex min-[721px]:justify-end min-[721px]:pb-0 min-[721px]:pl-0 min-[721px]:pr-6 min-[721px]:pt-7 min-[721px]:text-right">
+          <div className="col-start-2 row-start-1 pb-4 pl-2 text-left font-mono text-xs font-extrabold uppercase leading-relaxed tracking-[0.08em] text-third min-[721px]:col-start-1 min-[721px]:row-auto min-[721px]:flex min-[721px]:justify-end min-[721px]:pb-0 min-[721px]:pl-0 min-[721px]:pr-6 min-[721px]:pt-7 min-[721px]:text-right">
             <span className="max-w-40">{item.date}</span>
           </div>
 
@@ -33,7 +33,7 @@ export function ExperienceTimeline({ items }: ExperienceTimelineProps) {
             <h3 className="text-[22px] font-bold leading-tight">
               {item.role}
             </h3>
-            <p className="my-1 font-bold text-[#ffd166]">{item.org}</p>
+            <p className="my-1 font-bold text-third">{item.org}</p>
             <p className="leading-relaxed text-[#aec0c3]">{item.body}</p>
             {item.websiteUrl ? (
               <a

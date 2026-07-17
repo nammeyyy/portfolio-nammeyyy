@@ -55,7 +55,7 @@ function RoutedView() {
   }
 
   return (
-    <main className="grid min-h-screen place-items-center bg-[#101313] px-5 text-center text-[#edf4f4]">
+    <main className="grid min-h-screen place-items-center bg-[#101313] px-5 text-center text-secondaryText">
       <div>
         <p className="font-mono text-xs font-extrabold uppercase tracking-[0.08em] text-[#7be7ff]">
           404 / Route not found

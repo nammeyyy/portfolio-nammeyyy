@@ -8,10 +8,10 @@ const labelClass =
 
 export function ProjectsView() {
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_80%_18%,rgba(123,231,255,0.16),transparent_26rem),linear-gradient(135deg,#101313_0%,#141818_48%,#111414_100%)] text-[#edf4f4]">
+    <main className="min-h-screen bg-[radial-gradient(circle_at_80%_18%,rgba(123,231,255,0.16),transparent_26rem),linear-gradient(135deg,#101313_0%,#141818_48%,#111414_100%)] text-secondaryText">
       <header className="sticky top-0 z-20 border-b border-[#344144]/70 bg-[#101313]/75 px-5 py-3.5 backdrop-blur-lg md:px-16">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
-          <RouterLink className="font-extrabold text-[#edf4f4]" href="/">
+          <RouterLink className="font-extrabold text-secondaryText" href="/">
             Nutpawee
           </RouterLink>
           <RouterLink

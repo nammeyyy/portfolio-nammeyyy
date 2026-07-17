@@ -46,7 +46,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.tags.map((tag) => (
             <small
               key={tag}
-              className="rounded-full border border-[#7be7ff]/25 bg-[#7be7ff]/10 px-2.5 py-1.5 font-mono text-[13px] text-[#edf4f4]"
+              className="rounded-full border border-[#7be7ff]/25 bg-[#7be7ff]/10 px-2.5 py-1.5 font-mono text-[13px] text-secondaryText"
             >
               {tag}
             </small>
