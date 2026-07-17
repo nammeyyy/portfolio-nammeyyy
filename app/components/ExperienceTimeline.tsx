@@ -42,7 +42,7 @@ export function ExperienceTimeline({ items }: ExperienceTimelineProps) {
                 target="_blank"
                 rel="noreferrer"
               >
-                Visit Website
+                Visit Company's website ↗
               </a>
             ) : null}
           </article>
