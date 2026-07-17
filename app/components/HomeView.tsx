@@ -125,7 +125,7 @@ export function HomeView() {
 
             <div className="mt-8 flex flex-wrap items-center gap-3.5">
               <RouterLink
-                className="min-h-12 rounded-lg bg-cyan px-5 py-3.5 text-[13px] font-extrabold text-action transition hover:-translate-y-0.5"
+                className="min-h-12 rounded-lg bg-[var(--cyan)] px-5 py-3.5 text-[13px] font-extrabold text-action transition hover:-translate-y-0.5"
                 href="/#projects"
               >
                 View Projects

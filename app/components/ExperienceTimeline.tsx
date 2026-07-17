@@ -23,7 +23,7 @@ export function ExperienceTimeline({ items }: ExperienceTimelineProps) {
             className="col-start-1 row-span-2 row-start-1 flex justify-center pt-1 min-[721px]:col-start-2 min-[721px]:row-auto min-[721px]:pt-7"
             aria-hidden="true"
           >
-            <span className="block size-4.5 rounded-full border border-cyan bg-[radial-gradient(circle,var(--cyan)_0_3px,transparent_4px),#101313] shadow-[0_0_0_6px_rgba(123,231,255,0.08),0_0_24px_rgba(123,231,255,0.28)]" />
+            <span className="block size-4.5 rounded-full border border-(--cyan) bg-[radial-gradient(circle,var(--cyan)_0_3px,transparent_4px),#101313] shadow-[0_0_0_6px_rgba(123,231,255,0.08),0_0_24px_rgba(123,231,255,0.28)]" />
           </div>
 
           <article className="col-start-2 row-start-2 grid gap-3.5 rounded-lg border border-[#344144]/90 bg-[linear-gradient(135deg,rgba(123,231,255,0.09),transparent_34%),rgba(23,27,28,0.82)] p-6 transition hover:border-cyan/60 min-[721px]:col-start-3 min-[721px]:row-auto min-[721px]:gap-2.5 min-[721px]:p-7 min-[721px]:hover:translate-x-1">

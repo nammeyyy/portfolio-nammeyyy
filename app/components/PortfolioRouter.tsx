@@ -64,7 +64,7 @@ function RoutedView() {
           This path drifted off course.
         </h1>
         <RouterLink
-          className="mt-8 inline-flex rounded-lg bg-cyan px-5 py-3.5 text-[13px] font-extrabold text-action"
+          className="mt-8 inline-flex rounded-lg bg-(--cyan) px-5 py-3.5 text-[13px] font-extrabold text-action"
           href="/"
           replace
         >
