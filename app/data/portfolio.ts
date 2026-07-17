@@ -199,14 +199,14 @@ export const sideNavLinks: NavLink[] = [
   { label: "About", href: "/#about" },
   { label: "Projects", href: "/#projects" },
   { label: "Experience", href: "/#experience" },
-  { label: "Resume", href: "/resume.pdf", external: true },
+  { label: "Resume", href: "/Nutpawee_Full_Stack_CV.pdf", external: true },
   { label: "Contact", href: "/#contact" },
 ];
 
 export const topNavLinks: NavLink[] = [
   { label: "Skills", href: "/#skills" },
   { label: "Work", href: "/#projects" },
-  { label: "Resume", href: "/resume.pdf", external: true },
+  { label: "Resume", href: "/Nutpawee_Full_Stack_CV.pdf", external: true },
   { label: "Contact", href: "/#contact" },
 ];
 

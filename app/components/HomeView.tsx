@@ -132,7 +132,7 @@ export function HomeView() {
               </RouterLink>
               <a
                 className="min-h-12 rounded-lg border border-[#344144] px-5 py-3.5 text-[13px] font-extrabold text-[#edf4f4] transition hover:-translate-y-0.5 hover:border-[#7be7ff]/60 hover:bg-[#7be7ff]/10"
-                href="/resume.pdf"
+                href="/Nutpawee_Full_Stack_CV.pdf"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -140,7 +140,7 @@ export function HomeView() {
               </a>
               <a
                 className="min-h-12 rounded-lg px-5 py-3.5 text-[13px] font-extrabold text-[#ffd166] transition hover:-translate-y-0.5 hover:text-[#7be7ff]"
-                href="/resume.pdf"
+                href="/Nutpawee_Full_Stack_CV.pdf"
                 download
               >
                 Download Resume
