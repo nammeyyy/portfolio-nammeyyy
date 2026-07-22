@@ -100,7 +100,7 @@ export const projects: ProjectItem[] = [
   },
   {
     slug: "futureskill-learning-platform",
-    title: "FutureSkill Learning Platform",
+    title: "FutureSkill Learning Platform for B2C & B2B Users",
     label: "Production learning platform",
     image: "/projects/futureskill-platform.png",
     imageAlt: "FutureSkill online learning platform interface",
