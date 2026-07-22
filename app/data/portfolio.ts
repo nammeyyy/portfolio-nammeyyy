@@ -18,6 +18,7 @@ export type ProjectItem = {
   role: string;
   highlights: string[];
   githubUrl?: string;
+  presentationUrl?: string;
 };
 
 export type NavLink = {
@@ -121,6 +122,8 @@ export const projects: ProjectItem[] = [
     body: "Order, manufacturing, promotion, product categorization, and cart flows for an academic ecommerce system.",
     period: "Jun 2024 - Oct 2024",
     role: "Full-Stack Developer",
+    githubUrl: "https://github.com/nammeyyy/sa_project",
+    presentationUrl: "/projects/Chainarong_futurniture_sa_project.pdf",
     highlights: [
       "Built ecommerce flows for product browsing, categorization, promotions, cart, and order handling.",
       "Supported manufacturing-related order features for a furniture retail workflow.",
