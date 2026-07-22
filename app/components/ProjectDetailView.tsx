@@ -29,7 +29,7 @@ export function ProjectDetailView({ project }: { project: ProjectItem }) {
       </header>
 
       <article className="mx-auto max-w-5xl px-5 py-16 md:px-16 md:py-24">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-center">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(360px,0.9fr)] lg:items-center">
           <div>
             <p className={labelClass}>{project.label}</p>
             <h1 className="mt-4 max-w-full wrap-break-word text-[clamp(42px,6vw,76px)] font-black leading-none">
@@ -51,16 +51,26 @@ export function ProjectDetailView({ project }: { project: ProjectItem }) {
             ) : null}
           </div>
 
-          <div className="relative h-72 overflow-hidden rounded-lg border border-[#344144]/80 bg-[#171b1c]/45 md:h-80 lg:h-85">
+          <div className="relative aspect-video overflow-hidden rounded-lg border border-[#344144]/80 bg-[#171b1c]/45">
             <Image
               src={project.image}
               alt={project.imageAlt}
               fill
               priority
-              sizes="(max-width: 1023px) 100vw, 340px"
-              className="object-cover"
+              sizes="(max-width: 1023px) 100vw, 45vw"
+              className="object-cover transition duration-500 hover:scale-[1.02]"
             />
             <div className="absolute inset-0 ring-1 ring-inset ring-cyan/10" />
+            <a
+              className="absolute right-3 top-3 z-10 grid size-11 place-items-center rounded-lg border border-white/20 bg-[#101313]/80 text-xl text-secondaryText backdrop-blur-md transition hover:border-cyan hover:bg-[#101313] hover:text-breadcrumb"
+              href={project.image}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`View ${project.title} image full screen`}
+              title="View image full screen"
+            >
+              <AiOutlineExpand aria-hidden="true" />
+            </a>
           </div>
         </div>
 
