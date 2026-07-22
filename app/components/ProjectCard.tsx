@@ -80,6 +80,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
             GitHub ↗
           </a>
         ) : null}
+
+        {project.externalUrl ? (
+          <a
+            className="w-fit rounded-lg border border-[#344144] px-3 py-2 text-sm font-bold text-normal transition hover:border-cyan hover:text-breadcrumb"
+            href={project.externalUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {project.externalUrlLabel ?? "Visit Website"} ↗
+          </a>
+        ) : null}
       </div>
     </article>
   );

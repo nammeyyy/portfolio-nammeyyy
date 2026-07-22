@@ -49,6 +49,17 @@ export function ProjectDetailView({ project }: { project: ProjectItem }) {
                 View GitHub ↗
               </a>
             ) : null}
+
+            {project.externalUrl ? (
+              <a
+                className="mt-8 inline-flex rounded-lg border border-[#344144] px-4 py-3 font-bold text-normal transition hover:border-cyan hover:text-breadcrumb"
+                href={project.externalUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {project.externalUrlLabel ?? "Visit Website"} ↗
+              </a>
+            ) : null}
           </div>
 
           <div className="relative aspect-video overflow-hidden rounded-lg border border-[#344144]/80 bg-[#171b1c]/45">

@@ -18,6 +18,8 @@ export type ProjectItem = {
   role: string;
   highlights: string[];
   githubUrl?: string;
+  externalUrl?: string;
+  externalUrlLabel?: string;
   presentationUrl?: string;
 };
 
@@ -97,6 +99,25 @@ export const projects: ProjectItem[] = [
     ],
   },
   {
+    slug: "futureskill-learning-platform",
+    title: "FutureSkill Learning Platform",
+    label: "Production learning platform",
+    image: "/projects/futureskill-platform.png",
+    imageAlt: "FutureSkill online learning platform interface",
+    tags: ["Frontend Development", "API Integration", "Responsive UI"],
+    body: "Frontend integrations, course application flows, and UI stability improvements for a production B2C learning platform.",
+    period: "Apr 2025 - Aug 2025",
+    role: "Front-End Developer Intern",
+    externalUrl: "https://futureskill.co",
+    externalUrlLabel: "Visit Production Website",
+    highlights: [
+      "Built frontend integrations for affiliate links across relevant user journeys.",
+      "Implemented course application integrations for the B2C learning platform.",
+      "Fixed reusable UI component issues and improved frontend stability.",
+      "Contributed to selected production features during a frontend development internship.",
+    ],
+  },
+  {
     slug: "sopet-mobile-features",
     title: "SOPet Mobile App Features",
     label: "React Native mobile features",
@@ -145,22 +166,6 @@ export const projects: ProjectItem[] = [
       "Developed mobile screens for browsing fashion products and recommendations.",
       "Integrated Firebase Authentication, Firestore, and Cloud Storage.",
       "Implemented user profiles, posts, and product interaction features.",
-    ],
-  },
-  {
-    slug: "ar-racing-game",
-    title: "AR Racing Game",
-    label: "XR gameplay prototype",
-    image: "/projects/ar-racing.png",
-    imageAlt: "Augmented reality racing car moving around a tracked tabletop circuit",
-    tags: ["Unity", "C#", "Vuforia", "Blender"],
-    body: "Interactive AR racing with object tracking, scoring, movement controls, and optimized 3D assets.",
-    period: "Jul 2023 - Oct 2023",
-    role: "XR Developer",
-    highlights: [
-      "Created interactive AR gameplay using real-world object tracking.",
-      "Implemented scoring and movement controls for the racing experience.",
-      "Optimized 3D assets in Unity and Blender for smoother performance.",
     ],
   },
   {
