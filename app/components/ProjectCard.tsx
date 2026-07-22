@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AiOutlineExpand } from "react-icons/ai";
 import type { ProjectItem } from "../data/portfolio";
 import { RouterLink } from "./ClientRouter";
 
@@ -12,8 +13,12 @@ const labelClass =
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="group grid content-between overflow-hidden rounded-lg border border-[#344144]/90 bg-[linear-gradient(135deg,rgba(123,231,255,0.08),transparent_42%),rgba(23,27,28,0.78)] transition hover:-translate-y-1 hover:border-cyan/60">
-      <RouterLink className="grid" href={`/projects/${project.slug}`}>
-        <div className="relative aspect-video overflow-hidden border-b border-[#344144]/80 bg-[#101313]">
+      <div className="relative aspect-video overflow-hidden border-b border-[#344144]/80 bg-[#101313]">
+        <RouterLink
+          className="absolute inset-0"
+          href={`/projects/${project.slug}`}
+          aria-label={`View ${project.title} project`}
+        >
           <Image
             src={project.image}
             alt={project.imageAlt}
@@ -22,8 +27,20 @@ export function ProjectCard({ project }: ProjectCardProps) {
             className="object-cover transition duration-500 group-hover:scale-[1.035]"
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(16,19,19,0.42))]" />
-        </div>
+        </RouterLink>
+        <a
+          className="absolute right-3 top-3 z-10 grid size-10 place-items-center rounded-lg border border-white/20 bg-[#101313]/80 text-lg text-secondaryText backdrop-blur-md transition hover:border-cyan hover:bg-[#101313] hover:text-breadcrumb"
+          href={project.image}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`View ${project.title} image full screen`}
+          title="View image full screen"
+        >
+          <AiOutlineExpand aria-hidden="true" />
+        </a>
+      </div>
 
+      <RouterLink className="grid" href={`/projects/${project.slug}`}>
         <div className="grid gap-5 p-6 md:p-8">
           <p className={labelClass}>{project.label}</p>
           <div className="flex items-start justify-between gap-4">
