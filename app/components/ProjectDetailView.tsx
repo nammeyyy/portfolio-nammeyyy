@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AiOutlineExpand } from "react-icons/ai";
 import { FiArrowLeft } from "react-icons/fi";
 import type { ProjectItem } from "../data/portfolio";
 import { RouterLink } from "./ClientRouter";
@@ -85,6 +86,43 @@ export function ProjectDetailView({ project }: { project: ProjectItem }) {
             ))}
           </ul>
         </section>
+
+        {project.presentationUrl ? (
+          <section className="mt-10" aria-labelledby="project-presentation-title">
+            <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <p className={labelClass}>Project deck</p>
+                <h2
+                  id="project-presentation-title"
+                  className="mt-3 text-2xl font-bold"
+                >
+                  Presentation slides
+                </h2>
+              </div>
+              <a
+                className="inline-flex items-center gap-2 rounded-lg border border-[#344144] px-4 py-2.5 text-sm font-bold text-normal transition hover:border-cyan hover:text-breadcrumb"
+                href={project.presentationUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open full screen
+                <AiOutlineExpand className="text-base" aria-hidden="true" />
+              </a>
+            </div>
+
+            <div className="overflow-hidden rounded-lg border border-[#344144]/90 bg-[#171b1c]/80 shadow-[0_24px_60px_rgba(0,0,0,0.28)]">
+              <iframe
+                className="h-[70vh] min-h-120 w-full bg-white md:h-[78vh]"
+                src={`${project.presentationUrl}#view=FitH&toolbar=1&navpanes=0`}
+                title={`${project.title} presentation slides`}
+                loading="lazy"
+              />
+            </div>
+            <p className="mt-3 text-sm leading-6 text-normal">
+              Browse the complete project presentation directly on this page.
+            </p>
+          </section>
+        ) : null}
 
         <div className="mt-8 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
